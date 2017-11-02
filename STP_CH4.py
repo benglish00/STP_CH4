@@ -51,3 +51,28 @@ def f(x=2):
 print(f())
 for i in range(3,7):
     print(f(i))
+
+#Excepion handling
+a = 5
+b = 0
+a = int(a)
+b = int(b)
+try:
+    print(a/b)
+except ZeroDivisionError:
+    print("b cannot be zero")
+
+try:
+    b = int("Hundo")
+except ValueError:
+    print("b should be a number")
+
+#Docstrings. when parameters need to be a particular type
+def add(x,y):
+    """
+    Returns x + y
+    :param x: int
+    :param y: int
+    :return: int sum of x andy
+    """
+    return(x+y)
